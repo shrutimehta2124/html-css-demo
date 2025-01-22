@@ -1,0 +1,128 @@
+/*navlink*/
+@media screen and (max-width:991px) 
+{
+    .navtoggle{
+        display: block;
+        margin-right: 20px;
+    }
+    .item{
+        width:calc(50%-10px);
+        height: 150px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Adjust logo size */
+    .logo img {
+        width: 8em; /* Resize logo */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Adjust the menu layout for smaller screens */
+    menu {
+        width: 100%;
+        justify-content: center; /* Center the menu items */
+        gap: 20px; /* Reduce the gap between items */
+    }
+
+    /* Navbar (ul) styles */
+    .navbar {
+        display: none; /* Hide the menu items initially */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Make the navbar full width */
+    }
+
+    .navbar > li {
+        margin-right: 0; /* Remove right margin */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Show hamburger menu */
+    .navtoggle {
+        display: block;
+    }
+    .navbar.active {
+        display: flex; /* Show the navbar */
+    }
+
+    
+    .container1 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .left-content {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading p {
+        font-size: 1rem;
+    }
+
+    .img-container {
+        justify-content: center;
+    }
+
+    .right-content {
+        margin-bottom: 20px;
+    }
+
+    .img-container img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+            .container1 {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left-content {
+                
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .heading h1 {
+                font-size: 3rem;
+            }
+
+            .heading p {
+                font-size: 2rem;
+            }
+
+            .img-container {
+                justify-content: center;
+            }
+
+            .right-content {
+
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heading h1 {
+                font-size: 2rem;
+            }
+
+            .heading p {
+                font-size: 1rem;
+            }
+
+            .img-container img {
+                max-width: 100%;
+            }
+        }
