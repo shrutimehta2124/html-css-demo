@@ -239,7 +239,7 @@ menu {
       transform: translateX(-50%); /* Move both images to the left */
   }
 }
-
+/*new section*/
 .features-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -349,15 +349,7 @@ menu {
   margin: 0.25rem 0;
 }
 
-
- /* Container for the whole section */
- 
-/* Main blue section with flex layout */
-/* Main blue section with flex layout */
-/* Main blue section with flex layout */
-/* Main blue section with flex layout */
-
-/* Main blue section with flex layout */
+/* Main blue section */
 .blue-section {
   display: flex;
   margin-top: 10px;
@@ -393,7 +385,7 @@ menu {
   border-radius: 8px; /* Rounded corners */
   transition: transform 0.3s ease;
   position: relative; /* Allow positioning of the image */
-  top: -40px; /* Slightly adjust image upwards without overflowing */
+  top: -90px; /* Slightly adjust image upwards without overflowing */
 }
 
 /* Hover effect on image */
@@ -408,6 +400,7 @@ menu {
   flex-direction: column; /* Stack text and button vertically */
   justify-content: flex-start; /* Align to the top */
   padding-left: 20px; /* Space between the left and right sections */
+  align-items: center;
   box-sizing: border-box; /* Ensure padding is accounted for */
 }
 
@@ -417,9 +410,8 @@ menu {
   font-size: 48px;
   font-weight: 600;
   text-align: left;
-  line-height: 1.2;
-  margin: 0 0 10px 0; /* Remove top margin and set a small bottom margin */
-  position: relative; /* Allow positioning of the heading */
+  padding: 20px;
+  margin: 50px 0 20px 0; /* Remove top margin and set a small bottom margin */
   max-width: 100%; /* Ensure heading doesn't overflow the container */
   word-wrap: break-word; /* Break words to prevent overflow */
 }
@@ -431,8 +423,6 @@ menu {
   font-weight: 500;
   line-height: 32px;
   text-align: left;
-  bottom: -200px;
-  margin-top: 0; /* Remove any top margin */
   margin-bottom: 20px; /* Space below the paragraph */
   position: relative; /* Allow positioning of the paragraph */
   max-width: 100%; /* Ensure paragraph stays within bounds */
@@ -444,12 +434,11 @@ menu {
   margin-top: 20px; /* Add some space between paragraph and button */
   width: auto; /* Button width adjusts based on content */
   border-radius: 5px;
-  bottom: -400px;
   cursor: pointer;
   background-color: #FFFFFF; /* White background for the button */
   color: #4F7EF7; /* Blue text */
   border: none; /* Remove default button border */
-  align-self: flex-start; /* Align the button to the left */
+  align-self: left; /* Align the button to the left */
 }
 
 /* Button hover effect */
@@ -463,27 +452,30 @@ menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);  /* 2 items per row */
   gap: 20px;  /* Space between items */
-  justify-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin: 30px 30px 0 30px;
 }
-
 .item {
   background-color: #4F7EF712;
+  display: flex;
+  flex-direction: column;
   max-width: 100%;  /* Ensure the item takes full available width */
-  height: auto; /* Allow the height to adjust based on content */
+  height: 100%; /* Allow the height to adjust based on content */
   padding: 20px;
   border-radius: 24px;
   text-align: center;
+  padding-top: 30px;
+  box-sizing: border-box;
 }
 
 .item svg {
   width: 40.18px;
   height: 43px;
   top: 2.5px;
-  left: -50px;
 }
 
-h3 {
+.item h3 {
+  
   width: 100%;  /* Ensure heading spans full width */
   height: auto; /* Adjust height automatically */
   margin-top: 10px;
@@ -492,10 +484,6 @@ h3 {
   font-weight: 600;
   line-height: 40px;
   text-align: left;
-}
-
-.item h3 {
-  white-space: nowrap;
 }
 
 p {
@@ -734,66 +722,61 @@ input[type="text"] {
   pointer-events: none;
 }
 
-.more-feature-contain {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px; /* Space between left and right containers */
-  align-items: center;  /* Vertically align content */
-  padding: 20px;  /* Adjust padding as needed */
-}
 
-.contained-on-left-side {
-  display: flex;
-  margin-top: -90px;
-  flex-direction: column;
-  gap: 1rem;  /* Space between items */
-  padding: 20px;
-  justify-content: center;
-}
+  .more-feature-contain {
+    display: flex;
+    padding: 1rem;
+    gap:2rem;
+    justify-content: space-between;
+    width: 100%; /* Ensures it takes up full container width */
+  }
 
-.contained-on-right-side {
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-}
+  .contained-on-left-side, .contained-on-right-side {
+    flex: 1; /* Ensures both containers take equal space */
+    display: flex;
+    justify-content: flex-start;
+  }
 
-.feature-image-1 {
-  max-width: 100%;  /* Ensure the image scales well */
-  height: auto; /* Maintain aspect ratio */
-}
+  .content-item-feature {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start; /* Align items vertically at the top */
+    gap:1rem; /* Adds space between the icon and the text */
+  }
+  .icon-container svg {
+    width: 100%;
+    height: 100%;
+  }
 
-.feature-icon-container {
-  flex-shrink: 0;
-  width: 3rem;  /* Icon size */
-  height: 3rem; /* Icon size */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .feature-icon-container {
+    display: inline-block;
+    width: 3rem;
+  height: 3rem;
+  }
 
-.feature-icon-container svg {
-  max-width: 100%;  /* Make the SVG fill the container */
-  max-height: 100%; /* Maintain aspect ratio of the icon */
-}
+  .text-content-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:1rem;
+  }
 
-.text-content-feature {
-  display: flex;
-  flex-direction: column; /* Stack text vertically */
-  gap: 0.5rem;  /* Space between h4 and p */
-  align-items: flex-start; /* Align text to the left */
-  width: 100%;  /* Full width to avoid overflow */
-}
+  h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    margin: 0.25rem 0;
+  }
 
-.text-content-feature h4 {
-  font-size: 2rem; /* Desired font size */
-  color: #161639;
+  p {
+    font-size: 1.25rem;
   text-align: left;
-  margin: 0; /* Remove any margin */
-}
-
-.text-content-feature p {
-  font-size: 1.25rem; /* Size of paragraph text */
-  color: #555;
-  text-align: left;
-  margin: 0.25rem 0 0;
-}
+  margin: 0.25rem 0;
+  }
+  .feature-image-1 {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    animation: invertChange 2s infinite;
+  }
