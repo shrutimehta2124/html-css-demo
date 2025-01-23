@@ -176,38 +176,6 @@ menu {
   }
 }
 
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .container1 {
-      flex-direction: column; /* Stack the content vertically on smaller screens */
-      padding: 20px;
-  }
-
-  .left-content, .right-content {
-      flex: 1 1 100%; /* Full width on small screens */
-      margin-left: 0;
-      max-width: 100%;
-      height: auto;
-  }
-
-  .heading h1 {
-      font-size: 3rem; /* Adjust font size for mobile */
-  }
-
-  .heading p {
-      font-size: 18px; /* Adjust paragraph font size */
-  }
-
-  .img-container {
-      flex-direction: column; /* Stack images vertically */
-      max-width: 100%;
-  }
-
-  .right-content img {
-      width: 100%;
-      height: auto;
-  }
-}
 /* Container for the scrolling images */
 .scrolling-images {
   width: 100%; /* Ensure the container takes up the full width */
@@ -353,6 +321,8 @@ menu {
 .blue-section {
   display: flex;
   margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: #4F7EF7; /* Blue background for the whole section */
   width: 100%; /* Full width to make it responsive */
   height: auto; /* Height auto to adjust based on content */
@@ -401,6 +371,7 @@ menu {
   justify-content: flex-start; /* Align to the top */
   padding-left: 20px; /* Space between the left and right sections */
   align-items: center;
+  
   box-sizing: border-box; /* Ensure padding is accounted for */
 }
 
@@ -432,7 +403,7 @@ menu {
 .right button {
   padding: 12px 24px; /* Adjust padding for a more clickable button */
   margin-top: 20px; /* Add some space between paragraph and button */
-  width: auto; /* Button width adjusts based on content */
+  width: 100%; /* Button width adjusts based on content */
   border-radius: 5px;
   cursor: pointer;
   background-color: #FFFFFF; /* White background for the button */
@@ -590,15 +561,7 @@ p {
     opacity: 1;
   }
 }
-
-/* Optional: You can add media queries for responsiveness if needed */
-@media (max-width: 768px) {
-  .main-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
-
+/*new section */
 footer {
   background-color: #161639;
   padding: 40px;
@@ -721,8 +684,7 @@ input[type="text"] {
   transform: translateY(-50%);
   pointer-events: none;
 }
-
-
+/*new section */
   .more-feature-contain {
     display: flex;
     padding: 1rem;
@@ -735,6 +697,7 @@ input[type="text"] {
     flex: 1; /* Ensures both containers take equal space */
     display: flex;
     justify-content: flex-start;
+    margin-left: 2rem;
   }
 
   .content-item-feature {
